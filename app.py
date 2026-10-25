@@ -401,15 +401,9 @@ def records():
     )
 
 
-if __name__ == "__main__":
-    create_tables()
-    print("Helping Hands Foundation is starting...")
-    print("Open http://127.0.0.1:5000 in your browser.")
-    app.run(debug=True)
-
-"""
 create_tables()
 
 if __name__ == "__main__":
     print("Helping Hands Foundation is starting...")
-    app.run(debug=True)"""
+    print("Open http://127.0.0.1:5000 in your browser.")
+    app.run(debug=True)
