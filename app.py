@@ -4,8 +4,13 @@ import os
 
 app = Flask(__name__, static_folder="public")
 app.secret_key = "helping-hands-student-project"
-DATABASE = os.path.join(os.path.dirname(__file__), "helping_hands.db")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+DATABASE = os.environ.get(
+    "DATABASE_PATH",
+    os.path.join(BASE_DIR, "helping_hands.db")
+)
 
 def get_db():
     connection = sqlite3.connect(DATABASE)
