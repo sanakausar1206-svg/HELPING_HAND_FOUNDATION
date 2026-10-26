@@ -13,6 +13,8 @@ DATABASE = os.environ.get(
 )
 
 def get_db():
+    print("SQLite database path:", DATABASE)
+
     connection = sqlite3.connect(DATABASE)
     connection.row_factory = sqlite3.Row
     return connection
